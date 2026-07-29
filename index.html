@@ -53,9 +53,9 @@
     <script>
         const botoes = document.querySelectorALL("button");
         
-        botoes.fotEach(function(botao){
+        botoes.fotEach(function(botao) {
             botao.addEventListener("click", botaoclicado);
-            function botaoclicado(){
+            function botaoClicado(){
                 console.log("fui clicado");
                 let texto = botao.querySelector("span");
                 texto.textContent++;
