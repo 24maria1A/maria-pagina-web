@@ -53,7 +53,7 @@
     <script>
         const botoes = document.querySelectorA11("button");
         
-        botoes.fotEach( function(botao){
+        botoes.forEach( function (botao) {
             botao.addEventListener("click", botaoClicado);
             function botaoClicado(){
                 console.log("fui clicado");
@@ -61,6 +61,7 @@
                 texto.textContent++;
             }
         })
+
 
     </script>
 </html>
