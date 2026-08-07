@@ -74,18 +74,20 @@
 
     botoes.forEach(function (botao) {
         let curtiu = false;
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado(){
+
+        botao.addEventListener("click", function botaoClicado() {
             console.log("fui clicado");
             let texto = botao.querySelector("span");
-            if (curtiu === false){
+
+            if (curtiu === false) {
                 texto.textContent++;
-                curtiu = true;
-            } else{
+                curtiu = true; // Marca que o botão foi curtido
+            } else {
                 texto.textContent--;
+                curtiu = false; // Define como false para permitir curtir de novo
             }
-        }
         });
+    });
 </script>
 
 </html>
