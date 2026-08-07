@@ -25,6 +25,7 @@
         }
         article{
             display: flex;
+            margin-bottom: 20px;
         }
         img {
             width: 80px;
@@ -44,29 +45,28 @@
     </header>
     <main>
         <article>
-            
             <img src="imagem-bolg.png"
                 alt=" Ícone estilizado de um livro aberto com um computador e dados binários flutuantes, representando a união entre tecnologia e educação.">
-            <Div>
+            <div>
                 <h2>Meu primeiro post</h2>
                 <p class="artigo-autor">Por: Maria Luiza</p>
                 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
                     tecnologia. </p>
                 <button>❤️ <span>0</span></button>
                 <button>👍 <span>0</span></button>
-            </Div>
-            <img src="imagem-bolg.png"
-                alt=" Ícone estilizado de um livro aberto com um computador e dados binários flutuantes, representando a união entre tecnologia e educação.">
-            <Div>
+            </div>
         </article>
         <article>
-            <h2>Meu segundo post</h2>
-            <p class="artigo-autor">Por: Maria Luiza</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
-                tecnologia. </p>
-            <button>❤️ <span>0</span></button>
-            <button>👍 <span>0</span></button>
-        </Div>
+            <img src="imagem-bolg.png"
+                alt=" Ícone estilizado de um livro aberto com um computador e dados binários flutuantes, representando a união entre tecnologia e educação.">
+            <div>
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: Maria Luiza</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
+                    tecnologia. </p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
         </article>
     </main>
 </body>
@@ -74,12 +74,12 @@
     const botoes = document.querySelectorAll("button");
 
     botoes.forEach(function (botao) {
-        botao.addEventListener("click", function botaoClicado){
+        botao.addEventListener("click", function () {
             console.log("fui clicado");
             let texto = botao.querySelector("span");
             texto.textContent++;
-        }
-    })
+        });
+    });
 </script>
 
 </html>
