@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog </title>
+    <title>Blog</title>
     <style>
         header {
             background-color: #183C63;
@@ -23,9 +23,14 @@
             margin: 0 auto;
             padding: 16px;
         }
-        article{
+
+        article {
             display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
         }
+
         img {
             width: 80px;
             height: 80px;
@@ -40,46 +45,43 @@
 <body>
     <header>
         <h1>Meu blog tech</h1>
-        <p>vou compartilhar conhecimento sobre tecnologia e progração</p>
+        <p>Vou compartilhar conhecimento sobre tecnologia e programação</p>
     </header>
     <main>
         <article>
-            
-            <img src="imagem-bolg.png"
-                alt=" Ícone estilizado de um livro aberto com um computador e dados binários flutuantes, representando a união entre tecnologia e educação.">
-            <Div>
+            <img src="imagem-bolg.png" alt="Ícone estilizado de um livro aberto com um computador e dados binários flutuantes.">
+            <div>
                 <h2>Meu primeiro post</h2>
                 <p class="artigo-autor">Por: Maria Luiza</p>
-                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
-                    tecnologia. </p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
                 <button>❤️ <span>0</span></button>
                 <button>👍 <span>0</span></button>
-            </Div>
-            <img src="imagem-bolg.png"
-                alt=" Ícone estilizado de um livro aberto com um computador e dados binários flutuantes, representando a união entre tecnologia e educação.">
-            <Div>
+            </div>
         </article>
+
         <article>
-            <h2>Meu segundo post</h2>
-            <p class="artigo-autor">Por: Maria Luiza</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
-                tecnologia. </p>
-            <button>❤️ <span>0</span></button>
-            <button>👍 <span>0</span></button>
-        </Div>
+            <img src="imagem-bolg.png" alt="Ícone estilizado de um livro aberto com um computador e dados binários flutuantes.">
+            <div>
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: Maria Luiza</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
         </article>
     </main>
-</body>
-<script>
-    const botoes = document.querySelectorAll("button");
 
-    botoes.forEach(function (botao) {
-        botao.addEventListener("click", function botaoClicado){
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            texto.textContent++;
-        }
-    })
-</script>
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+            botao.addEventListener("click", function () {
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                texto.textContent = Number(texto.textContent) + 1;
+            });
+        });
+    </script>
+</body>
 
 </html>
