@@ -12,5 +12,5 @@
                 texto.textContent--;
                 curtiu = false;
             }
-        });
-    });
+        })
+    })
