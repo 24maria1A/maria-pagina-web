@@ -17,13 +17,13 @@
 
     const BtnTemaEscuro =  document.querySelector(".bnt-tema-escuro");
 
-BtnTemaEscuro.addEventListener("click", muda Tema);
+BtnTemaEscuro.addEventListener("click", mudaTema);
 
 function mudaTema() {
     const corpoPagina = document.body;
     if(corpoPagina.classlist.contains("tema-escuro")) {
-        }else{
+        corpoPagina.classlist.remove("tema-escuro");
+        } else {
     corpoPagina.classlist.add("tema-escuro");
-        
     }
 }
